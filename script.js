@@ -107,6 +107,96 @@ const songs = [
         artist: "MassTamilan",
         src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647332/Vibe_Vaasey_f0rh1c.mp3",
         cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Dheema",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647331/Dheema_rx8oi1.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Adaavadi (V1)",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647330/Adaavadi_1_jhxaof.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pattuma",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647330/Pattuma_n1k6tt.mp3",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Enakenna Yaarum Illaye (V1)",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647329/Enakenna_Yaarum_Illaye_1_fcdcmc.mp3",
+        cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Adaavadi",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647329/Adaavadi_g1ahwx.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pavazha Malli",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647328/Pavazha_Malli_lnogso.mp3",
+        cover: "https://images.unsplash.com/photo-1516280440502-861159f43f0a?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Enakenna Yaarum Illaye",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1778647327/Enakenna_Yaarum_Illaye_nstlgd.mp3",
+        cover: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pookattum (V2)",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1778647327/Pookattum_qurt8r.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pavazha Malli (V2)",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1778647326/Pavazha_Malli_1_wb9lha.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Katchi Sera",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647323/Katchi_Sera_zchrm0.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Rise of Veera",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1778647323/Rise-of-Veera-MassTamilan.dev_tekdie.mp3",
+        cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Rise of Veera (V2)",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647322/Rise-of-Veera-MassTamilan.dev_1_augpev.mp3",
+        cover: "https://images.unsplash.com/photo-1516280440502-861159f43f0a?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Arasan Theme",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647322/Arasan-Theme-MassTamilan.dev_effk3b.mp3",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Bloody Sweet",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647322/Bloody-Sweet-MassTamilan.dev_kaevro.mp3",
+        cover: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "23 Theme",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647322/23_Theme_noqnxg.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
     }
 ];
 
@@ -126,6 +216,7 @@ const currentArtist = document.getElementById('current-artist');
 
 const greetingGrid = document.getElementById('greeting-grid');
 const songCards = document.getElementById('song-cards');
+const searchInput = document.getElementById('search-input');
 
 // Audio Object
 let audio = new Audio();
@@ -161,10 +252,11 @@ function renderGreetingCards() {
 }
 
 // Render all song cards in the main section
-function renderSongCards() {
+function renderSongCards(songsToRender = songs) {
     songCards.innerHTML = '';
     
-    songs.forEach((song, index) => {
+    songsToRender.forEach((song) => {
+        const index = songs.indexOf(song); // get original index for playSpecificSong
         const card = document.createElement('div');
         card.className = 'song-card';
         card.innerHTML = `
@@ -317,6 +409,18 @@ document.body.addEventListener('keydown', (e) => {
         togglePlayPause();
     }
 });
+
+// Search Functionality
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredSongs = songs.filter(song => 
+            song.title.toLowerCase().includes(searchTerm) || 
+            song.artist.toLowerCase().includes(searchTerm)
+        );
+        renderSongCards(filteredSongs);
+    });
+}
 
 // Run Init
 init();

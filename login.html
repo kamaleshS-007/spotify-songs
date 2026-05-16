@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-header">
+            <i class="fab fa-spotify"></i>
+            <span>Spotify</span>
+        </div>
+        <h1 class="login-title">Log in to Spotify</h1>
+        
+        <form class="login-form" action="index.html">
+            <div class="form-group">
+                <label for="username">Email or username</label>
+                <input type="text" id="username" placeholder="Email or username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            
+            <div class="form-remember">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="remember">
+                    <span class="slider"></span>
+                </label>
+                <span class="remember-text">Remember me</span>
+            </div>
+            
+            <button type="submit" class="login-submit-btn">Log In</button>
+            
+            <div class="login-links">
+                <a href="#">Forgot your password?</a>
+            </div>
+            
+            <hr class="login-divider">
+            
+            <div class="login-signup">
+                <span>Don't have an account?</span>
+                <a href="#">Sign up for Spotify</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

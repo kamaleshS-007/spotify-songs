@@ -1,3 +1,8 @@
+// Check Login Status
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+}
+
 // Song Data Array
 const songs = [
     {
@@ -605,6 +610,15 @@ if (searchInput) {
             song.artist.toLowerCase().includes(searchTerm)
         );
         renderSongCards(filteredSongs);
+    });
+}
+
+// Logout Functionality
+const logoutBtn = document.getElementById('logout-btn');
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'login.html';
     });
 }
 

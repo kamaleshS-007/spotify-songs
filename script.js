@@ -227,6 +227,138 @@ const songs = [
         artist: "MassTamilan",
         src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789391964/Raga_of_Revenge_-_Masstamilan.MY_gpzjpm.mp3",
         cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Vishwanath Sons Teaser Theme",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394448/Vishwanath_Sons_Teaser_Theme_-_Masstamilan.MY_tr9vvo.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Kannakuzhiya",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394463/04_-_kannakuzhiya_piewch.mp3",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Mannaru",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394465/Mannaru_-_Masstamilan.MY_axvtxh.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pacha Pulla",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394467/02_-_pacha-pulla_bu8pvj.mp3",
+        cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Alexa",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394468/05_-_alexa_yelc2i.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Kudikara Nenju",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394470/03_-_kudikara-nenju_efrae0.mp3",
+        cover: "https://images.unsplash.com/photo-1516280440502-861159f43f0a?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Radhimaa",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394472/Radhimaa_-_Masstamilan.MY_yauqz6.mp3",
+        cover: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Theme Of Hi",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394483/08_-_theme-of-hi_komy47.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Kathakali Kattappa",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394486/06_-_kathakali-kattappa_ywe7od.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Sakkaraiye",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394489/07_-_sakkaraiye_adx6r3.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Oli Vattam",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394492/04_-_oli-vattam_vn85dy.mp3",
+        cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Rasagulla",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394500/01_-_rasagulla_d56wun.mp3",
+        cover: "https://images.unsplash.com/photo-1516280440502-861159f43f0a?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Kai Valavi Kulunga",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394504/03_-_kai-valavi-kulunga_uniwpa.mp3",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Mandaadi Mandaadi",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394516/01_-_mandaadi-mandaadi_nxeeqn.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "YaaLi Theme",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394517/YaaLi_Theme_-_Masstamilan.MY_udtkjk.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Neer Porkalam",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394518/05_-_neer-porkalam_skf5wh.mp3",
+        cover: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Usure Needhan Pulla",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394518/02_-_usure-needhan-pulla_rap9ek.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pralayam Aagudhe",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394522/Pralayam_Aagudhe_-_Masstamilan.MY_clvb0e.mp3",
+        cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Aura 10/10",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394533/Aura_10_10_From_Meesaya_Murukku_2_-_Masstamilan.MY_lxetek.mp3",
+        cover: "https://images.unsplash.com/photo-1516280440502-861159f43f0a?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Alaakaa Loova",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394534/Alaakaa_Loova_-_Masstamilan.MY_yhgg2q.mp3",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Pattampoochi",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394547/Pattampoochi_-_Masstamilan.MY_j5jwlg.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Loser Song",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789394555/Loser_Song_-_Masstamilan.MY_j89utc.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
     }
 ];
 

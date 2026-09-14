@@ -197,6 +197,36 @@ const songs = [
         artist: "MassTamilan",
         src: "https://res.cloudinary.com/doduftwwh/video/upload/q_auto/f_auto/v1778647322/23_Theme_noqnxg.mp3",
         cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Basinga Balaalu",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789391978/Basinga_Balaalu_-_Masstamilan.MY_uwl0zg.mp3",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Rage Of Sigma",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789391978/Rage_Of_Sigma_-_Masstamilan.MY_hvucv0.mp3",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Ayyayo Ammaadi",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789391974/Ayyayo_Ammaadi_-_Masstamilan.MY_gscrsz.mp3",
+        cover: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f924?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Aane Wala Star",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789391964/Aane_Wala_Star_-_Masstamilan.MY_mhdzkn.mp4",
+        cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=300&h=300"
+    },
+    {
+        title: "Raga of Revenge",
+        artist: "MassTamilan",
+        src: "https://res.cloudinary.com/doduftwwh/video/upload/v1789391964/Raga_of_Revenge_-_Masstamilan.MY_gpzjpm.mp3",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=300&h=300"
     }
 ];
 
@@ -217,6 +247,9 @@ const currentArtist = document.getElementById('current-artist');
 const greetingGrid = document.getElementById('greeting-grid');
 const songCards = document.getElementById('song-cards');
 const searchInput = document.getElementById('search-input');
+
+const likeBtn = document.getElementById('like-btn');
+const addPlaylistBtn = document.getElementById('add-playlist-btn');
 
 // Audio Object
 let audio = new Audio();
@@ -401,6 +434,27 @@ audio.addEventListener('timeupdate', updateProgress);
 audio.addEventListener('ended', nextSong);
 progressBar.addEventListener('input', setProgress);
 volumeBar.addEventListener('input', updateVolume);
+
+if (likeBtn) {
+    likeBtn.addEventListener('click', () => {
+        likeBtn.classList.toggle('fas');
+        likeBtn.classList.toggle('far');
+        likeBtn.classList.toggle('active');
+    });
+}
+
+if (addPlaylistBtn) {
+    addPlaylistBtn.addEventListener('click', () => {
+        addPlaylistBtn.classList.toggle('active');
+        if(addPlaylistBtn.classList.contains('active')) {
+            addPlaylistBtn.className = 'fas fa-check-circle playlist-add-icon active';
+            addPlaylistBtn.title = "Remove from Playlist";
+        } else {
+            addPlaylistBtn.className = 'fas fa-plus-circle playlist-add-icon';
+            addPlaylistBtn.title = "Add to Playlist";
+        }
+    });
+}
 
 // Handle spacebar to play/pause
 document.body.addEventListener('keydown', (e) => {

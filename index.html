@@ -28,8 +28,18 @@
 
             <div class="library-actions">
                 <ul>
-                    <li><i class="fas fa-plus-square"></i> <span>Create Playlist</span></li>
-                    <li><i class="fas fa-heart"></i> <span>Liked Songs</span></li>
+                    <li>
+                        <div class="action-icon create-playlist-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <span>Create Playlist</span>
+                    </li>
+                    <li>
+                        <div class="action-icon liked-songs-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span>Liked Songs</span>
+                    </li>
                 </ul>
             </div>
 
@@ -91,7 +101,8 @@
                 <h4 id="current-title">Select a song</h4>
                 <p id="current-artist">Various Artists</p>
             </div>
-            <i class="far fa-heart heart-icon"></i>
+            <i class="fas fa-plus-circle playlist-add-icon" id="add-playlist-btn" title="Add to Playlist"></i>
+            <i class="far fa-heart heart-icon" id="like-btn" title="Save to your Liked Songs"></i>
         </div>
 
         <div class="player-controls">

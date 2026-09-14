@@ -92,12 +92,46 @@ body {
     color: var(--text-primary);
 }
 
-.nav-links i, .library-actions i {
+.nav-links i {
     font-size: 20px;
 }
 
 .library-actions {
     margin-top: 0;
+}
+
+.action-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+}
+
+.action-icon i {
+    font-size: 12px;
+}
+
+.create-playlist-icon {
+    background-color: var(--text-secondary);
+    color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.library-actions li:hover .create-playlist-icon {
+    background-color: var(--text-primary);
+}
+
+.liked-songs-icon {
+    background: linear-gradient(135deg, #450af5, #c4efd9);
+    color: var(--text-primary);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.library-actions li:hover .liked-songs-icon {
+    opacity: 1;
 }
 
 .playlists {
@@ -439,14 +473,25 @@ body {
     color: var(--text-secondary);
 }
 
-.heart-icon {
+.heart-icon, .playlist-add-icon {
     color: var(--text-secondary);
     cursor: pointer;
     margin-left: 10px;
+    font-size: 16px;
+    transition: color 0.2s, transform 0.1s;
 }
 
-.heart-icon:hover {
+.heart-icon:hover, .playlist-add-icon:hover {
     color: var(--text-primary);
+    transform: scale(1.1);
+}
+
+.heart-icon.active {
+    color: var(--accent-color);
+}
+
+.playlist-add-icon.active {
+    color: var(--accent-color);
 }
 
 /* Player Controls */

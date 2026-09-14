@@ -5,102 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Log in</title>
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="page-wrapper">
-        <!-- Header -->
-        <header class="login-header">
-            <a href="#" class="header-logo">
-                <svg role="img" height="40" width="40" aria-hidden="true" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.9 .9C6.7.9.9 6.7.9 13.9s5.8 13 13 13 13-5.8 13-13S21.1.9 13.9.9zm5.9 18.8c-.2.4-.7.5-1.1.2-3-1.8-6.7-2.2-11.1-1.2-.4.1-.8-.2-.9-.6-.1-.4.2-.8.6-.9 4.8-1.1 8.9-.6 12.2 1.4.5.3.6.8.3 1.1zm1.6-3.5c-.3.5-.9.6-1.3.3-3.4-2.1-8.5-2.7-12.5-1.5-.5.1-1-.1-1.2-.6-.1-.5.1-1 .6-1.2 4.6-1.4 10.2-.7 14.1 1.7.4.3.6.9.3 1.3zm.1-3.6c-4.1-2.4-10.8-2.6-14.7-1.5-.6.2-1.3-.2-1.5-.8-.2-.6.2-1.3.8-1.5 4.5-1.4 11.9-1.1 16.6 1.7.6.3.8 1.1.4 1.7-.3.5-1 .7-1.6.4z"/>
-                </svg>
-                <span>Spotify</span>
-            </a>
-        </header>
 
-        <!-- Login Card -->
-        <main class="login-main">
-            <div class="login-card">
-                <h1>Log in to Spotify</h1>
+    <!-- ── HEADER ── -->
+    <header class="sp-header">
+        <a href="#" class="sp-logo">
+            <!-- Official Spotify SVG logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="48" height="48">
+                <path fill="#1ed760" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/>
+            </svg>
+        </a>
+    </header>
 
-                <!-- Social Login Buttons -->
-                <div class="social-buttons">
-                    <button class="social-btn google-btn" type="button">
-                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+    <!-- ── MAIN ── -->
+    <main class="sp-main">
+        <div class="sp-card">
+            <h1 class="sp-title">Log in to Spotify</h1>
+
+            <!-- Social Buttons -->
+            <div class="sp-socials">
+
+                <button class="sp-social-btn" type="button">
+                    <!-- Google -->
+                    <span class="sp-social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
+                            <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                            <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.32-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                            <path fill="#FBBC05" d="M11.68 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.68-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.34-5.7z"/>
+                            <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.34 5.7c1.74-5.2 6.59-9.07 12.32-9.07z"/>
                         </svg>
-                        Continue with Google
-                    </button>
-                    <button class="social-btn facebook-btn" type="button">
-                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#1877F2">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </span>
+                    <span>Continue with Google</span>
+                </button>
+
+                <button class="sp-social-btn" type="button">
+                    <!-- Facebook -->
+                    <span class="sp-social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
-                        Continue with Facebook
-                    </button>
-                    <button class="social-btn apple-btn" type="button">
-                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </span>
+                    <span>Continue with Facebook</span>
+                </button>
+
+                <button class="sp-social-btn" type="button">
+                    <!-- Apple -->
+                    <span class="sp-social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 814 1000" width="22" height="22">
+                            <path fill="#000" d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-42.4-150.3-109.8c-52.8-75.9-101.7-193.7-101.7-306.2 0-192.5 125.4-294.1 248.4-294.1 63.5 0 116.4 41.8 156.1 41.8 37.9 0 97.8-44.3 170.8-44.3zm-249-99c27.4-32.1 46.9-76.6 46.9-121.1 0-6.2-.5-12.4-1.6-17.4-44.3 1.6-97.1 29.5-129.1 66.4-24.9 27.8-48.7 72.3-48.7 117.4 0 6.7 1.1 13.4 1.6 15.5 2.7.5 7 1.1 11.3 1.1 39.9 0 90.4-26.4 119.6-61.9z"/>
                         </svg>
-                        Continue with Apple
-                    </button>
-                </div>
+                    </span>
+                    <span>Continue with Apple</span>
+                </button>
 
-                <!-- Divider -->
-                <div class="or-divider">
-                    <hr><span>or</span><hr>
-                </div>
-
-                <!-- Login Form -->
-                <form id="login-form" novalidate>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" id="email" placeholder="Email address" autocomplete="email">
-                        <span class="error-msg" id="email-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="password-wrapper">
-                            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
-                            <button type="button" class="toggle-password" id="toggle-password" aria-label="Show password">
-                                <i class="fas fa-eye" id="eye-icon"></i>
-                            </button>
-                        </div>
-                        <span class="error-msg" id="password-error"></span>
-                    </div>
-
-                    <div class="form-options">
-                        <label class="remember-me">
-                            <input type="checkbox" id="remember" checked>
-                            <span class="checkbox-label">Remember me</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="login-btn" id="login-submit-btn">Log In</button>
-                </form>
-
-                <a href="#" class="forgot-link">Forgot your password?</a>
-
-                <hr class="bottom-divider">
-
-                <p class="signup-text">
-                    Don't have an account? <a href="#">Sign up for Spotify</a>
-                </p>
             </div>
-        </main>
 
-        <!-- Footer -->
-        <footer class="login-footer">
-            <p>This site is protected by reCAPTCHA and the Google
-                <a href="#">Privacy Policy</a> and
-                <a href="#">Terms of Service</a> apply.
+            <!-- Divider -->
+            <div class="sp-divider">
+                <span>or</span>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="sp-form" novalidate autocomplete="off">
+
+                <div class="sp-field" id="email-field">
+                    <label for="email">Email address or username</label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email address or username"
+                        autocomplete="email"
+                        spellcheck="false"
+                    >
+                    <p class="sp-field-error" id="email-error"></p>
+                </div>
+
+                <div class="sp-field" id="password-field">
+                    <label for="password">Password</label>
+                    <div class="sp-pw-wrap">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Password"
+                            autocomplete="current-password"
+                        >
+                        <button type="button" class="sp-eye-btn" id="toggle-pw" aria-label="Show password">
+                            <!-- Eye open -->
+                            <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <!-- Eye closed (hidden by default) -->
+                            <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                <line x1="1" y1="1" x2="23" y2="23"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="sp-field-error" id="password-error"></p>
+                </div>
+
+                <div class="sp-row">
+                    <label class="sp-remember">
+                        <input type="checkbox" id="remember" checked>
+                        <span class="sp-checkmark"></span>
+                        <span class="sp-remember-label">Remember me</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="sp-login-btn" id="login-btn">
+                    Log in
+                </button>
+
+            </form>
+
+            <a href="#" class="sp-forgot">Forgot your password?</a>
+
+            <hr class="sp-line">
+
+            <p class="sp-signup">
+                Don't have an account?
+                <a href="#">Sign up for Spotify</a>
             </p>
-        </footer>
-    </div>
+        </div>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="sp-footer">
+        <nav class="sp-footer-links">
+            <a href="#">Legal</a>
+            <a href="#">Safety & Privacy Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">About Ads</a>
+            <a href="#">Accessibility</a>
+        </nav>
+        <p class="sp-footer-copy">© 2024 Spotify AB</p>
+    </footer>
 
     <script src="login.js"></script>
 </body>

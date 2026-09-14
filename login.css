@@ -1,76 +1,77 @@
-/* ==============================
-   SPOTIFY LOGIN PAGE — REDESIGNED
-   ============================== */
+/* ===========================================
+   SPOTIFY LOGIN — PIXEL-PERFECT RECREATION
+   =========================================== */
 
 *, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
-    --green: #1ed760;
+    --green:       #1ed760;
+    --green-dark:  #169c46;
     --green-hover: #1fdf64;
-    --black: #000000;
-    --dark: #121212;
-    --card: #121212;
-    --text-primary: #ffffff;
-    --text-muted: #a7a7a7;
-    --border: #878787;
-    --border-focus: #ffffff;
-    --error: #f15e6c;
-    --input-bg: #121212;
+    --white:       #ffffff;
+    --black:       #000000;
+    --bg:          #121212;
+    --card-bg:     #121212;
+    --surface:     #1a1a1a;
+    --border:      #878787;
+    --border-focus:#ffffff;
+    --text:        #ffffff;
+    --text-sub:    #a7a7a7;
+    --error:       #f15e6c;
+    --error-bg:    rgba(241,94,108,.12);
+    --input-bg:    #121212;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--black);
-    color: var(--text-primary);
-    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* ─── HEADER ─── */
-.login-header {
-    background-color: var(--black);
-    border-bottom: 1px solid #282828;
+/* ── HEADER ─────────────────────────────── */
+.sp-header {
+    background: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 18px 32px;
+    padding: 20px 32px;
+    border-bottom: 1px solid #282828;
 }
 
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.sp-logo {
+    display: block;
+    line-height: 0;
     text-decoration: none;
-    color: var(--text-primary);
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: -0.5px;
+    transition: opacity .15s;
 }
 
-/* ─── MAIN ─── */
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+.sp-logo:hover { opacity: .85; }
 
-.login-main {
+/* ── MAIN ────────────────────────────────── */
+.sp-main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 40px 20px 60px;
-    background: linear-gradient(to bottom, #1a1a1a 0%, var(--black) 50%);
+    background: linear-gradient(180deg, #1a1a1a 0%, var(--bg) 60%);
 }
 
-/* ─── CARD ─── */
-.login-card {
-    background-color: var(--card);
+/* ── CARD ────────────────────────────────── */
+.sp-card {
+    background: #121212;
     border-radius: 8px;
     padding: 48px 48px 56px;
     width: 100%;
@@ -78,63 +79,67 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
 }
 
-.login-card h1 {
+/* ── TITLE ───────────────────────────────── */
+.sp-title {
     font-size: 32px;
     font-weight: 900;
+    letter-spacing: -0.5px;
     text-align: center;
     margin-bottom: 32px;
-    letter-spacing: -0.5px;
+    color: var(--text);
 }
 
-/* ─── SOCIAL BUTTONS ─── */
-.social-buttons {
+/* ── SOCIAL BUTTONS ──────────────────────── */
+.sp-socials {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 24px;
 }
 
-.social-btn {
+.sp-social-btn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 13px 16px;
+    gap: 0;
+    padding: 13px 20px;
     border: 1px solid var(--border);
     border-radius: 500px;
     background: transparent;
-    color: var(--text-primary);
-    font-size: 14px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
     font-weight: 700;
     cursor: pointer;
-    transition: border-color 0.15s, transform 0.1s, background 0.15s;
-    font-family: inherit;
+    letter-spacing: 0.4px;
     position: relative;
+    transition: border-color .15s, transform .1s, background .15s;
 }
 
-.social-btn svg {
-    flex-shrink: 0;
+.sp-social-btn:hover {
+    border-color: var(--text);
+    background: rgba(255,255,255,.06);
+    transform: scale(1.01);
+}
+
+.sp-social-btn:active {
+    transform: scale(.99);
+}
+
+.sp-social-icon {
     position: absolute;
     left: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 0;
 }
 
-.social-btn:hover {
-    border-color: var(--text-primary);
-    background: rgba(255,255,255,0.05);
-    transform: scale(1.02);
-}
-
-.social-btn:active {
-    transform: scale(0.99);
-}
-
-/* ─── DIVIDER ─── */
-.or-divider {
+/* ── OR DIVIDER ──────────────────────────── */
+.sp-divider {
     width: 100%;
     display: flex;
     align-items: center;
@@ -142,246 +147,301 @@ body {
     margin-bottom: 24px;
 }
 
-.or-divider hr {
+.sp-divider::before,
+.sp-divider::after {
+    content: '';
     flex: 1;
-    border: none;
-    border-top: 1px solid #292929;
+    height: 1px;
+    background: #292929;
 }
 
-.or-divider span {
-    color: var(--text-muted);
+.sp-divider span {
+    color: var(--text-sub);
     font-size: 14px;
     font-weight: 600;
-    white-space: nowrap;
+    padding: 0 4px;
 }
 
-/* ─── FORM ─── */
-#login-form {
+/* ── FORM ────────────────────────────────── */
+.sp-form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0;
 }
 
-.form-group {
+/* ── FIELD ───────────────────────────────── */
+.sp-field {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
 }
 
-.form-group label {
+.sp-field label {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
-    color: var(--text-primary);
+    color: var(--text);
 }
 
-.form-group input[type="email"],
-.form-group input[type="password"],
-.form-group input[type="text"] {
-    background-color: var(--input-bg);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    border-radius: 4px;
-    padding: 14px 16px;
-    font-size: 16px;
-    font-family: inherit;
+.sp-field input[type="text"],
+.sp-field input[type="password"],
+.sp-field input[type="email"] {
     width: 100%;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    padding: 15px 16px;
+    background: #242424;
+    border: 1px solid #727272;
+    border-radius: 4px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .2s, box-shadow .2s;
+    -webkit-appearance: none;
 }
 
-.form-group input:hover {
-    border-color: var(--border-focus);
-}
-
-.form-group input:focus {
-    border-color: var(--border-focus);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
-}
-
-.form-group input::placeholder {
+.sp-field input::placeholder {
     color: #6a6a6a;
 }
 
-/* Input error state */
-.form-group input.input-error {
-    border-color: var(--error) !important;
-    box-shadow: 0 0 0 3px rgba(241,94,108,0.2);
+.sp-field input:hover {
+    border-color: var(--border-focus);
 }
 
-.error-msg {
+.sp-field input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(255,255,255,.1);
+}
+
+/* Error state */
+.sp-field.has-error input {
+    border-color: var(--error) !important;
+    box-shadow: 0 0 0 3px rgba(241,94,108,.2) !important;
+}
+
+.sp-field-error {
     color: var(--error);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     margin-top: 6px;
     min-height: 18px;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 1.4;
+}
+
+.sp-field-error:not(:empty)::before {
+    content: "⚠";
+    font-size: 12px;
+    flex-shrink: 0;
 }
 
 /* Password wrapper */
-.password-wrapper {
+.sp-pw-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.password-wrapper input {
-    padding-right: 48px;
+.sp-pw-wrap input {
+    padding-right: 52px;
 }
 
-.toggle-password {
+.sp-eye-btn {
     position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 14px;
     background: none;
     border: none;
-    color: var(--text-muted);
     cursor: pointer;
-    font-size: 16px;
+    color: var(--text-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 4px;
-    transition: color 0.2s;
+    border-radius: 50%;
+    transition: color .15s;
+    line-height: 0;
 }
 
-.toggle-password:hover {
-    color: var(--text-primary);
+.sp-eye-btn:hover { color: var(--text); }
+
+/* ── REMEMBER ROW ────────────────────────── */
+.sp-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
 }
 
-/* Remember me */
-.form-options {
-    margin-bottom: 24px;
-}
-
-.remember-me {
+.sp-remember {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    width: fit-content;
-}
-
-.remember-me input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--green);
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-.checkbox-label {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-primary);
     user-select: none;
 }
 
-/* ─── LOGIN BUTTON ─── */
-.login-btn {
+/* Custom checkbox */
+.sp-remember input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sp-checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #a7a7a7;
+    border-radius: 3px;
+    flex-shrink: 0;
+    transition: background .15s, border-color .15s;
+}
+
+.sp-remember input:checked ~ .sp-checkmark {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.sp-remember input:checked ~ .sp-checkmark::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 9px;
+    border: 2px solid #000;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.sp-remember-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+/* ── LOGIN BUTTON ────────────────────────── */
+.sp-login-btn {
     width: 100%;
-    padding: 15px 16px;
-    background-color: var(--green);
-    color: #000000;
+    padding: 15px 32px;
+    background: var(--green);
+    color: #000;
     border: none;
     border-radius: 500px;
-    font-size: 15px;
-    font-weight: 900;
     font-family: inherit;
-    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    transition: background-color 0.15s, transform 0.1s;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
     margin-bottom: 24px;
 }
 
-.login-btn:hover {
-    background-color: var(--green-hover);
+.sp-login-btn:hover {
+    background: var(--green-hover);
     transform: scale(1.03);
 }
 
-.login-btn:active {
-    background-color: #169c46;
-    transform: scale(0.99);
+.sp-login-btn:active {
+    background: var(--green-dark);
+    transform: scale(.99);
 }
 
-/* ─── FORGOT LINK ─── */
-.forgot-link {
-    color: var(--text-primary);
+.sp-login-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── FORGOT ──────────────────────────────── */
+.sp-forgot {
+    color: var(--text);
     font-size: 14px;
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: rgba(255,255,255,0.4);
+    text-decoration-color: rgba(255,255,255,.35);
     text-underline-offset: 3px;
-    transition: color 0.15s, text-decoration-color 0.15s;
-    margin-bottom: 24px;
-    align-self: center;
+    transition: text-decoration-color .15s;
+    margin-bottom: 28px;
 }
 
-.forgot-link:hover {
+.sp-forgot:hover {
     text-decoration-color: rgba(255,255,255,1);
 }
 
-/* ─── BOTTOM DIVIDER ─── */
-.bottom-divider {
+/* ── SEPARATOR LINE ──────────────────────── */
+.sp-line {
     width: 100%;
     border: none;
     border-top: 1px solid #292929;
     margin-bottom: 24px;
 }
 
-/* ─── SIGN UP TEXT ─── */
-.signup-text {
-    font-size: 14px;
-    color: var(--text-muted);
+/* ── SIGNUP ──────────────────────────────── */
+.sp-signup {
+    font-size: 15px;
+    color: var(--text-sub);
     text-align: center;
 }
 
-.signup-text a {
-    color: var(--text-primary);
+.sp-signup a {
+    color: var(--text);
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: rgba(255,255,255,0.4);
+    text-decoration-color: rgba(255,255,255,.35);
     text-underline-offset: 3px;
-    transition: text-decoration-color 0.15s;
+    transition: text-decoration-color .15s;
 }
 
-.signup-text a:hover {
+.sp-signup a:hover {
     text-decoration-color: rgba(255,255,255,1);
 }
 
-/* ─── FOOTER ─── */
-.login-footer {
-    background-color: var(--black);
-    padding: 24px 32px;
+/* ── FOOTER ──────────────────────────────── */
+.sp-footer {
+    background: #0a0a0a;
+    padding: 32px 40px;
     text-align: center;
-    border-top: 1px solid #282828;
+    border-top: 1px solid #1a1a1a;
 }
 
-.login-footer p {
+.sp-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    margin-bottom: 20px;
+}
+
+.sp-footer-links a {
+    color: var(--text-sub);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color .15s;
+}
+
+.sp-footer-links a:hover { color: var(--text); }
+
+.sp-footer-copy {
+    color: #727272;
     font-size: 12px;
-    color: var(--text-muted);
-    max-width: 500px;
-    margin: 0 auto;
-    line-height: 1.6;
 }
 
-.login-footer a {
-    color: var(--text-muted);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.login-footer a:hover {
-    color: var(--text-primary);
-}
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 560px) {
-    .login-card {
-        padding: 32px 24px 40px;
+/* ── RESPONSIVE ──────────────────────────── */
+@media (max-width: 580px) {
+    .sp-card {
+        padding: 32px 20px 40px;
+        border-radius: 0;
     }
-    .login-card h1 {
-        font-size: 26px;
-    }
-    .social-btn svg {
-        left: 14px;
-    }
+    .sp-title { font-size: 26px; }
+    .sp-social-icon { left: 14px; }
+    .sp-footer { padding: 24px 20px; }
 }

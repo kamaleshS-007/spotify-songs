@@ -1,119 +1,135 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ── If already logged in, skip to main app ──
+    // ── If already logged in → go to app ──────────────────────────
     if (localStorage.getItem('isLoggedIn') === 'true') {
         window.location.href = 'index.html';
         return;
     }
 
-    // ── Elements ──
-    const loginForm      = document.getElementById('login-form');
-    const emailInput     = document.getElementById('email');
-    const passwordInput  = document.getElementById('password');
-    const emailError     = document.getElementById('email-error');
-    const passwordError  = document.getElementById('password-error');
-    const togglePassword = document.getElementById('toggle-password');
-    const eyeIcon        = document.getElementById('eye-icon');
+    // ── Elements ───────────────────────────────────────────────────
+    const form          = document.getElementById('login-form');
+    const emailInput    = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const emailError    = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+    const emailField    = document.getElementById('email-field');
+    const passwordField = document.getElementById('password-field');
+    const loginBtn      = document.getElementById('login-btn');
+    const togglePwBtn   = document.getElementById('toggle-pw');
+    const eyeOpen       = document.getElementById('eye-open');
+    const eyeClosed     = document.getElementById('eye-closed');
 
-    // ── Toggle password visibility ──
-    togglePassword.addEventListener('click', () => {
-        const isHidden = passwordInput.type === 'password';
-        passwordInput.type = isHidden ? 'text' : 'password';
-        eyeIcon.className  = isHidden ? 'fas fa-eye-slash' : 'fas fa-eye';
+    // ── Show / Hide Password ───────────────────────────────────────
+    togglePwBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type  = isPassword ? 'text' : 'password';
+        eyeOpen.style.display  = isPassword ? 'none'  : 'block';
+        eyeClosed.style.display = isPassword ? 'block' : 'none';
+        togglePwBtn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
     });
 
-    // ── Real-time email validation (on blur) ──
-    emailInput.addEventListener('blur', () => validateEmail());
-    emailInput.addEventListener('input', () => {
-        // clear error while typing after a previous submit
-        emailError.textContent = '';
-        emailInput.classList.remove('input-error');
-    });
+    // ── Helpers: show / clear error ───────────────────────────────
+    function showError(field, errorEl, message) {
+        field.classList.add('has-error');
+        errorEl.textContent = message;
+    }
 
-    passwordInput.addEventListener('input', () => {
-        passwordError.textContent = '';
-        passwordInput.classList.remove('input-error');
-    });
+    function clearError(field, errorEl) {
+        field.classList.remove('has-error');
+        errorEl.textContent = '';
+    }
 
-    // ── Email validation helper ──
+    // ── Clear errors while typing ──────────────────────────────────
+    emailInput.addEventListener('input', () => clearError(emailField, emailError));
+    passwordInput.addEventListener('input', () => clearError(passwordField, passwordError));
+
+    // ── Email Validation ───────────────────────────────────────────
     function validateEmail() {
         const val = emailInput.value.trim();
 
         if (val === '') {
-            setError(emailInput, emailError, 'Email address is required.');
+            showError(emailField, emailError, 'Please enter your email address or username.');
             return false;
         }
 
-        // Must be a valid email format
+        // Basic email format check
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(val)) {
-            setError(emailInput, emailError, 'Please enter a valid email address.');
-            return false;
+            // Could be a username (no @) — accept it
+            // Only reject if it looks like an email but has wrong domain
+            if (val.includes('@')) {
+                showError(emailField, emailError, 'Please enter a valid email address.');
+                return false;
+            }
+            // Username without @ — allow it
+            clearError(emailField, emailError);
+            return true;
         }
 
-        // Must be Gmail or Outlook domain only
+        // It's an email — check if domain is Gmail or Outlook
         const domain = val.split('@')[1].toLowerCase();
         const allowedDomains = [
             'gmail.com',
-            'outlook.com',
-            'outlook.in',
-            'outlook.co.uk',
-            'hotmail.com',
-            'hotmail.in',
-            'live.com'
+            'outlook.com', 'outlook.in', 'outlook.co.uk',
+            'hotmail.com', 'hotmail.in', 'hotmail.co.uk',
+            'live.com', 'live.in', 'live.co.uk',
+            'msn.com'
         ];
 
         if (!allowedDomains.includes(domain)) {
-            setError(emailInput, emailError, 'Only Gmail or Outlook email addresses are accepted.');
+            showError(emailField, emailError,
+                'Only Gmail or Outlook email addresses are accepted (e.g. name@gmail.com or name@outlook.com).');
             return false;
         }
 
-        clearError(emailInput, emailError);
+        clearError(emailField, emailError);
         return true;
     }
 
+    // ── Password Validation ────────────────────────────────────────
     function validatePassword() {
         const val = passwordInput.value;
+
         if (val === '') {
-            setError(passwordInput, passwordError, 'Password is required.');
+            showError(passwordField, passwordError, 'Please enter your password.');
             return false;
         }
+
         if (val.length < 6) {
-            setError(passwordInput, passwordError, 'Password must be at least 6 characters.');
+            showError(passwordField, passwordError, 'Password must be at least 6 characters.');
             return false;
         }
-        clearError(passwordInput, passwordError);
+
+        clearError(passwordField, passwordError);
         return true;
     }
 
-    function setError(input, errorEl, message) {
-        input.classList.add('input-error');
-        errorEl.textContent = message;
-    }
-
-    function clearError(input, errorEl) {
-        input.classList.remove('input-error');
-        errorEl.textContent = '';
-    }
-
-    // ── Form submit ──
-    loginForm.addEventListener('submit', (e) => {
+    // ── Form Submit ────────────────────────────────────────────────
+    form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const emailValid    = validateEmail();
-        const passwordValid = validatePassword();
+        const emailOk    = validateEmail();
+        const passwordOk = validatePassword();
 
-        if (emailValid && passwordValid) {
-            // Store login state
+        if (emailOk && passwordOk) {
+            // Disable button + show loading state
+            loginBtn.disabled    = true;
+            loginBtn.textContent = 'Logging in…';
+            loginBtn.style.background = '#169c46';
+
+            // Save session
             localStorage.setItem('isLoggedIn', 'true');
-            // Animate button before redirect
-            const btn = document.getElementById('login-submit-btn');
-            btn.textContent = '✓ Logging in…';
-            btn.style.background = '#169c46';
+
+            // Brief delay for UX, then redirect
             setTimeout(() => {
                 window.location.href = 'index.html';
-            }, 600);
+            }, 700);
         }
+    });
+
+    // ── Email blur validation ──────────────────────────────────────
+    emailInput.addEventListener('blur', () => {
+        if (emailInput.value.trim() !== '') validateEmail();
     });
 
 });
